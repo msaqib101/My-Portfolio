@@ -57,7 +57,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff; 
+  overflow: hidden;}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -9687,3 +9688,19 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+
+    .js-fullheight {
+      height: 100vh;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    
+    @media (max-width: 768px) {
+      .js-fullheight {
+        height: auto; /* Let it be natural height on mobile */
+        min-height: auto;
+      }
+    }
+    
