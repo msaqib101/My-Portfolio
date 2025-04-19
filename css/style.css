@@ -58,7 +58,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff; 
-  overflow: hidden;}
+  overflow: visible;}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8436,9 +8436,10 @@ h1, h2, h3, h4, h5,
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      height: 750px;
+      min-height: 100vh;
+      height: auto;
       position: relative;
-      z-index: 0; }
+      z-index: 0;}
       @media (max-width: 1199.98px) {
         .owl-carousel.home-slider .slider-item {
           background-position: center center !important; } }
@@ -9691,16 +9692,64 @@ textarea.form-control {
 
 
 
-    .js-fullheight {
-      height: 100vh;
+    
+ 
+    .slider-item {
+      position: relative;
       min-height: 100vh;
-      overflow: hidden;
+      z-index: 0;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3); /* Optional */
+    }
+    
+    .img1 {
+      width: 100%;
+      height: 100%;
     }
     
     @media (max-width: 768px) {
-      .js-fullheight {
-        height: auto; /* Let it be natural height on mobile */
-        min-height: auto;
+      .img1 {
+        min-height: 300px;
+      }
+    
+      .text {
+        text-align: center;
+        padding-top: 2rem;
       }
     }
+    h1 {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      color: rgb(255, 189, 57);
+      font-size: 60px;
+      line-height: 72px;
+    }
+   /* Mobile and small screens */
+/* Overlay styling for mobile */
+@media (max-width: 767px) {
+  .position-relative {
+    position: relative;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #fff;
+  }
+}
+
+    
+    
+    
     
